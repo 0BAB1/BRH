@@ -26,7 +26,7 @@ description: >- # used by seo meta and the atom feed
 url: "https://0bab1.github.io"
 
 github:
-  username: 0BAB1 # change to your GitHub username
+  username: 0bab1 # change to your GitHub username
 
 # twitter:
 #   username: twitter_username # change to your Twitter username
@@ -149,7 +149,7 @@ pwa:
 paginate: 10
 
 # The base URL of your site
-baseurl: "/blog"
+baseurl: "BRH"
 
 # ------------ The following options are not recommended to be modified ------------------
 
