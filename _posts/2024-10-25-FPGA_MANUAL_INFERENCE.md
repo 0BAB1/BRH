@@ -21,7 +21,7 @@ mermaid: false
 
 FINN Provides a very nice runtime environement based on Pynq to run FPGA inference directly from a notebook.
 
-However, you might want to run inference on other (unsuported) FPGA boards. Given that only 2 boards are made for PYNQ and only [a few](http://www.pynq.io/boards.html) are officially supported at the moment, we will do the FPGA inference manually.
+However, you might want to run inference on other (unsuported) FPGA boards. Given that only 2 boards are made for PYNQ and only [a few](https://www.pynq.io/boards.html) are officially supported at the moment, we will do the FPGA inference manually.
 This allows for better understanding and flexibility for your future projects.
 
 To do so, we will go over various steps to make it work.
