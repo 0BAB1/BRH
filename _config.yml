@@ -9,17 +9,17 @@ theme: jekyll-theme-chirpy
 lang: en
 
 # Change to your timezone › https://kevinnovak.github.io/Time-Zone-Picker
-timezone:
+timezone: Europe/Monaco
 
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: BRH - French SoC Enjoyer # the main title
+title: BRH - French SoC enjoyer # the main title
 
-tagline: Full Tutorials Access # it will display as the subtitle
+tagline: Full access to tutorials, posts & ressources. # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
-  BRH - Full Write-ups and Tutorials for FPGA, AI and more !
+  Full access to tutorials, posts & ressources.
 
 # Fill in the protocol & hostname for your site.
 # E.g. 'https://username.github.io', note that it does not end with a '/'.
@@ -28,14 +28,17 @@ url: "https://0bab1.github.io"
 github:
   username: 0BAB1 # change to your GitHub username
 
+# twitter:
+#   username: twitter_username # change to your Twitter username
+
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
-  name: BRH Megacorp
-  email: 
-  # change to your email address
+  name: BRH Megacorp.
   links:
     # The first element serves as the copyright owner's link
+    # - https://twitter.com/username # change to your Twitter homepage
+    - https://github.com/0BAB1 # change to your GitHub homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
     # - https://www.linkedin.com/in/username
@@ -94,7 +97,7 @@ theme_mode: # [light | dark]
 cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar: "./avatar.png"
+avatar: https://avatars.githubusercontent.com/u/62248962?s=400&u=50354616fc4fd1d253daf88e569a4d40f6dcdf04&v=4
 
 # The URL of the site-wide social preview image used in SEO `og:image` meta tag.
 # It can be overridden by a customized `page.image` in front matter.
@@ -146,7 +149,7 @@ pwa:
 paginate: 10
 
 # The base URL of your site
-baseurl: ""
+baseurl: "/blog"
 
 # ------------ The following options are not recommended to be modified ------------------
 
