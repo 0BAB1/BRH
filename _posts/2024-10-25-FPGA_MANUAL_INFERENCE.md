@@ -6,6 +6,9 @@ tags: [ai, python, fpga]
 pin: false
 math: false
 mermaid: false
+image:
+  path: https://image.noelshack.com/fichiers/2024/44/7/1730629387-image-py2-fpga-2l.jpg
+  alt: Tutorial 2 = Manual IP Inference
 ---
 
 # Manual inference : A bonus sub-tutorial
