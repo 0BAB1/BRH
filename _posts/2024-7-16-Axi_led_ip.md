@@ -2,24 +2,23 @@
 title: Build you own 1st AXI LED IP
 date: 2024-7-16 15:00:00 +0800
 categories: [Tutorials, Zynq]
-tags: [zynq, fpga, xilinx]
+tags: [zynq, fpga, xilinx, beginner]
 pin: false
 math: false
 mermaid: false
 image:
-  path: https://shop.trenz-electronic.de/media/image/07/1d/e2/TE0715-04-51I33-A_1.jpg
+  path: https://www.researchgate.net/publication/351705470/figure/fig5/AS:1025414466121737@1621489268475/Xilinx-Zynq-7000-AP-SoC-architecture.png
   alt: Zynq SoC
 ---
-
 # Building your own AXI LED IP
 
 Based on this [video](https://youtu.be/zJJTxOT37K4).
 {% include embed/youtube.html id='zJJTxOT37K4' %}
 
 > Level : Beginner in fpga (See prerequisites below).
-{: .prompt-info }
+> {: .prompt-info }
 
-## [The repo containing HW & SW code](https://github.com/0BAB1/BRH_Tutorials/tree/main/2%20AXI%20IP%20Hello%20world%20custom%20LED%20driver)
+## [The repo containing HW &amp; SW code](https://github.com/0BAB1/BRH_Tutorials/tree/main/2%20AXI%20IP%20Hello%20world%20custom%20LED%20driver)
 
 ## Intro
 
@@ -29,7 +28,6 @@ FROM designing a simple hello world design to understand the workflow
 TO building your own IP over the AXI protocol,
 
 This small post & video will make you go from newbie to (*almost*) proficient in engineering.
-
 
 ## Prerequisites
 
@@ -41,13 +39,13 @@ This small post & video will make you go from newbie to (*almost*) proficient in
 ## Layout
 
 > This tutorial is full-video, here is a layout of what you'll learn and some points of information.
-{: .prompt-tip }
+> {: .prompt-tip }
 
 ### Part 1 : Hello world
 
 1. Implement the Zynq Processing Sytem (PS) (Embedded ARM CPU) in vivado
 2. Add xilinx's base I/O IP (we'll see how to make ours in a minute)
-3. Run sofware on it and learn how to interface with the FPGA using software running on the PS (Using Vitis) 
+3. Run sofware on it and learn how to interface with the FPGA using software running on the PS (Using Vitis)
 
 ### Part 2 : Make our own LED Driver IP
 
@@ -71,4 +69,4 @@ Reads also work ! Don't hesitate to play around with the code to read value from
 Here are some resources to debug AXI interfaces if you'd like to try more advanced stuff :
 
 - [Xilinx AXI VIP as a master to verify your IP](https://support.xilinx.com/s/article/1058302?language=en_US)
-- [Xilinx AXI VIP, use it for your projects & access testbenches](https://www.xilinx.com/video/hardware/how-to-use-axi-verification-ip-to-verify-debug-design-using-simulation.html)
+- [Xilinx AXI VIP, use it for your projects &amp; access testbenches](https://www.xilinx.com/video/hardware/how-to-use-axi-verification-ip-to-verify-debug-design-using-simulation.html)
