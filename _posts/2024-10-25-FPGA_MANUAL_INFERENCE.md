@@ -1,7 +1,7 @@
 ---
 title: Implementing an AI Model IP (from FINN) in VIVADO on Xilinx FPGA
 date: 2024-10-25 15:00:00 +0800
-categories: [Tutorials]
+categories: [Tutorials, Fpga_ai]
 tags: [ai, python, fpga]
 pin: false
 math: false
