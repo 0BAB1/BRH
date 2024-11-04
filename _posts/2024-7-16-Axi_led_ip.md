@@ -66,7 +66,9 @@ Reads also work ! Don't hesitate to play around with the code to read value from
 
 ## Ressources
 
-Here are some resources to debug AXI interfaces if you'd like to try more advanced stuff :
+Here are some resources to debug AXI interfaces if you'd like to try more advanced stuff and get tsome exercise on waveforms inspecting for AXI :
 
 - [Xilinx AXI VIP as a master to verify your IP](https://support.xilinx.com/s/article/1058302?language=en_US)
 - [Xilinx AXI VIP, use it for your projects &amp; access testbenches](https://www.xilinx.com/video/hardware/how-to-use-axi-verification-ip-to-verify-debug-design-using-simulation.html)
+
+![AXI VIP Img](https://support.xilinx.com/sfc/servlet.shepherd/version/renditionDownload?rendition=THUMB720BY480&versionId=0682E00000SUfk7&operationContext=CHATTER&contentId=05T2E00001lMXoT&page=0)
