@@ -161,9 +161,10 @@ Here is the new simulation result :
 
 ![Worker load added occupation simulation img](https://image.noelshack.com/fichiers/2024/45/2/1730807609-capture.jpg)
 
-We see our worker is very busy at the beginning ! Given the facts that they are deadlines, ne worker might want to dalay th part control and organize himself a bit differently using the spare time he has. ut we now know it's doable !
+We see our worker is very busy at the beginning ! Given the facts that they are deadlines, the worker might want to dalay the "*part control*" task and organize himself a bit differently using the spare time he has. ut we now know it's doable !
 
-You can now play around with the scheduler and set priorities to the task in order to see on different organizations would affect the worker.
+> You can now play around with the scheduler and set priorities to the task in order to see on different organizations would affect the worker.
+{: .prompt-info }
 
 ## Conclusion
 
