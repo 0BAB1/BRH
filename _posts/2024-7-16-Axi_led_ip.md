@@ -16,7 +16,7 @@ Based on this [video](https://youtu.be/zJJTxOT37K4).
 {% include embed/youtube.html id='zJJTxOT37K4' %}
 
 > Level : Beginner in fpga (See prerequisites below).
-> {: .prompt-info }
+{: .prompt-info }
 
 ## [The repo containing HW &amp; SW code](https://github.com/0BAB1/BRH_Tutorials/tree/main/2%20AXI%20IP%20Hello%20world%20custom%20LED%20driver)
 
@@ -39,7 +39,7 @@ This small post & video will make you go from newbie to (*almost*) proficient in
 ## Layout
 
 > This tutorial is full-video, here is a layout of what you'll learn and some points of information.
-> {: .prompt-tip }
+{: .prompt-tip }
 
 ### Part 1 : Hello world
 
