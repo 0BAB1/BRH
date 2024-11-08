@@ -13,7 +13,7 @@ image:
 
 # Manual inference : A bonus sub-tutorial
 
->> **This post is a follow up to the ["python to FPGA tutorial"](https://0bab1.github.io/BRH/posts/PY2FPGA/)** . It covers the necessary process to manually implement the output IP from FINN in a design using VIVADO, DMA and many more !
+> **This post is a follow up to the ["python to FPGA tutorial"](https://0bab1.github.io/BRH/posts/PY2FPGA/)** . It covers the necessary process to manually implement the output IP from FINN in a design using VIVADO, DMA and many more !
 {: .prompt-info }
 
 Based on this [video](https://www.youtube.com/watch?v=VsXMlSB6Yq4).
@@ -89,11 +89,8 @@ The end custom system should then look like this :
 
 ![Final system image](https://raw.githubusercontent.com/0BAB1/BRH_Tutorials/refs/heads/main/8%20Python%20to%20FPGA/3_manual_inference/final_custom_system.png)
 
-> [!CAUTION]
-> As you saw in the video, some weird stuff happens when you configure the custom FIFO data width to 32 bits to match the one of DMA. Here's a good way to get around this : 
-> this consits in not changing the default 8bits data width of the fifo and letting the DMA operate in 32 its with memory.
-> To avoid mismatch between the 8bits fifo and the 32bits dma interfaces, we connect them manually using constants and concat blocks, this process is
-> described in the video.
+> As you saw in the video, some weird stuff happens when you configure the custom FIFO data width to 32 bits to match the one of DMA. Here's a good way to get around this : this consits in not changing the default 8bits data width of the fifo and letting the DMA operate in 32 its with memory.To avoid mismatch between the 8bits fifo and the 32bits dma interfaces, we connect them manually using constants and concat blocks. (this process is quilckly described in the video.)
+{: .prompt-danger }
 
 **ANYWAY**, here are the working configs used in the tutorial at the end with the concat and const manual connections :
 
