@@ -172,6 +172,9 @@ We now have a very interresting tool to determine our worker dedication to a pro
 
 This real time analysis tool was meant for very accurate system, so there is still room for interpretation and tweaking for our application.
 
+> Note that the example given above is just an introduction and only works for simple exmaples were pericicites and cycle times are asseted to be the same for each macine. If this approximation does not fit your use case, contect me for more infrmation on how to accurately estimate the actual line periodicity and thus : worker occupation AND real cylcle time.
+{: .prompt-danger }
+
 This post was meant to introduce the reader to this tool. Similar solutions include the [Cycle diagram](https://fr.wikipedia.org/wiki/Diagramme_de_cycle) which is kind of an old-scool forgetten tool that does not even have an english wiki version.
 
 > If you need clarifications, do not hesitate to contact me, or leave a comment below.
