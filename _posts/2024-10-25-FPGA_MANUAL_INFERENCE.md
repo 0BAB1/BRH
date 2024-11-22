@@ -11,7 +11,7 @@ image:
   alt: Tutorial 2 = Manual IP Inference
 ---
 
-# Manual inference : A bonus sub-tutorial
+## Manual inference : A "bonus" sub-tutorial
 
 > **This post is a follow up to the ["python to FPGA tutorial"](https://0bab1.github.io/BRH/posts/PY2FPGA/)** . It covers the necessary process to manually implement the output IP from FINN in a design using VIVADO, DMA and many more !
 {: .prompt-info }
