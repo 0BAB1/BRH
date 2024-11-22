@@ -359,15 +359,6 @@ module axi_translator (
     input  logic                     axi_rlast,
     input  logic                     axi_rvalid,
     output logic                     axi_rready,
-
-    // CPU Interface
-    input logic [31:0]               cpu_address,
-    input logic [31:0]               cpu_write_data,
-    input logic                      cpu_read_enable,
-    input logic                      cpu_write_enable,
-    input logic [3:0]                cpu_byte_enable,
-    output logic [31:0]              cpu_read_data,
-    output logic                     cpu_cache_stall
 );
 
     // Declare the AXI master interface for the cache
