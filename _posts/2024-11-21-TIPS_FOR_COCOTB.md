@@ -7,7 +7,7 @@ pin: false
 math: false
 mermaid: false
 image:
-  path: https://opengraph.githubassets.com/4ce9506b9a67956f2c9c95991677ef577cc341615adc2f4eb2847bb66a2040da/cocotb/cocotb
+  path: https://image.noelshack.com/fichiers/2024/47/4/1732198043-capture.jpg
   alt: Cocotb github page
 ---
 <!-- FINAL NAME : 2024-11-21-TIPS_FOR_COCOTB -->
@@ -191,7 +191,7 @@ In the backend, Verilator will run and create some build_dir with all of the com
 
 Given that we wrote our makefile the right way, we now have a ```dump.vcd``` file that contains all the waveforms. You can open it using ```gtkwave dump.vcd``` or any other wave viewer you want :
 
-[Waveform example](https://image.noelshack.com/fichiers/2024/47/4/1732198043-capture.jpg)
+![Waveform example](https://image.noelshack.com/fichiers/2024/47/4/1732198043-capture.jpg)
 
 This waveform is totally unrelated to the design we just made, It's just an illustration.
 
