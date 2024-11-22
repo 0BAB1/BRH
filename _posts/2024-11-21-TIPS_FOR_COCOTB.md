@@ -28,7 +28,7 @@ But here are some points of information I still need to put some emphasis on :
 - **Cocotb** is **not** a simulator, but rather uses a already established simulator in the backend
 - **Cocotb** is open-source and easy to use; unlike the old and rigid proprietary tools you can find out there.
 
-This is great because you just write a tesbench in python and then use whatever simulator you want, cocotb will handle the simulating part for you.
+This is great because you just write a tesbench in python (fast & "easy") and then use whatever simulator you want, cocotb will handle the simulating part for you.
 
 In this post's examples, I'll use Verilator and I will show you how to :
 
@@ -48,7 +48,7 @@ In this post's examples, I'll use Verilator and I will show you how to :
 - For AXI interface : Install the [corresponding cocotb extension](https://github.com/alexforencich/cocotbext-axi)
 - Have a wave visualizer to open the dumped waveforms (in ```.vcd``` format), I use **GTKWave**.
 
-## Basic project setup
+## My personal tips for a good basic project setup
 
 > Note that the following setup is something I came up with myself and is **NOT** standard by any mean. But it works and I find it quite nice.
 {: .prompt-warning }
@@ -63,7 +63,7 @@ When starting an HDL project, you first want to create some HDL files, let's do 
 
 We'll write very basic logic here :
 
-```sv
+```SystemVerilog
 module logic1 (
     input logic clk,
     input logic reset_n,
@@ -146,7 +146,7 @@ So yeah you don't need that much ! If you are here, there is a good chance you k
 
 Nevertheless, here is an example of how to make a basic testbench, with a clock signl, some randomness and a reset co-routine you can call whenever you need to reset the design.
 
-> Note that "```dut```" stands for "_**D**esign **U**nder **T**est"_ and is an handle you can use to access... well... all the dut's signals to do whatever you want with it ! 
+> Note that "```dut```" stands for "**D**esign **U**nder **T**est" and is an handle you can use to access... well... all the dut's signals to do whatever you want with it !
 
 ```python
 # test_logic1.py
@@ -195,7 +195,7 @@ Given that we wrote our makefile the right way, we now have a ```dump.vcd``` fil
 
 This waveform is totally unrelated to the design we just made, It's just an illustration.
 
-### A tip for have clean projects
+### A tip to have a clean workspace
 
 > Running the test can create a lot of build folders and files. I suggeest you use a makefile at the root of your project with the only purpose of cleaning the project.
 {: .prompt-tip }
@@ -206,12 +206,12 @@ Here is an example of such a Makefile from the HOLY CORE course I'm developing r
 .PHONY: clean
 
 clean:
-	@find ./tb -type d -name "__pycache__" -exec rm -rf {} +
-	@find ./tb -type d -name "sim_build" -exec rm -rf {} +
-	@find ./tb -type f -name "results.xml" -exec rm -f {} +
-	@find ./tb -type f -name "*.None" -exec rm -f {} +
-	@find ./tb -type d -name ".pytest_cache" -exec rm -rf {} +
-	@find ./tb -type f -name "dump.vcd" -exec rm -f {} +
+    @find ./tb -type d -name "__pycache__" -exec rm -rf {} +
+    @find ./tb -type d -name "sim_build" -exec rm -rf {} +
+    @find ./tb -type f -name "results.xml" -exec rm -f {} +
+    @find ./tb -type f -name "*.None" -exec rm -f {} +
+    @find ./tb -type d -name ".pytest_cache" -exec rm -rf {} +
+    @find ./tb -type f -name "dump.vcd" -exec rm -f {} +
 ```
 
 ## Another tip for when the project gets bigger
@@ -313,7 +313,7 @@ So rather than modifying everything in the tested module,
 just add it in an ```axi_translator``` top module that will serve as a "demux" (*if you use system verilog interface*) and a renamer, Here is an example using system verilog interface, you can also just use
 plain verilog and just rename the signals :
 
-```sv
+```SystemVerilog
 // This module instantiates the cache and routes the AXI interface as discrete Verilog signals for cocotb
 
 module axi_translator (
@@ -427,7 +427,6 @@ endmodule
 And with our new ```axi_translator``` as a the top-level dut, we can use the **cocotbext-axi**'s ```AxiRam``` to simulate some RAM we'll try to access.
 
 The **cocotbext-axi** is pretty easy to use once you get your head around how it works, especially given the ease of use of python :
-
 
 ```python
 # test_logic_axi.py
