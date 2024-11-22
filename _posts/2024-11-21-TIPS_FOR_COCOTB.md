@@ -134,7 +134,7 @@ You can also add as many HDL files for modules as you want and as many sub-folde
 
 ## Writing a basic testbench
 
-When it come to the tesbench, the [cocotb docs]() gives us many clues on how to do it and you don't need that much feature after all do write some nice and robust testbenches.
+When it come to the tesbench, the [cocotb docs](https://docs.cocotb.org/en/stable/writing_testbenches.html) gives us many clues on how to do it and you don't need that much feature after all do write some nice and robust testbenches.
 
 Let's review what makes a good testbench :
 
