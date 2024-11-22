@@ -8,7 +8,7 @@ math: false
 mermaid: false
 image:
   path: https://image.noelshack.com/fichiers/2024/47/4/1732198043-capture.jpg
-  alt: Cocotb github page
+  alt: Cocotb waveforms example on my HOLY CORE course
 ---
 <!-- FINAL NAME : 2024-11-21-TIPS_FOR_COCOTB -->
 <!-- TODO : Add illustrations -->
