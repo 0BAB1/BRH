@@ -161,7 +161,7 @@ async def reset(dut):
     await RisingEdge(dut.clk)
     dut.reset_n.value = 0
     await RisingEdge(dut.clk)
-    dut.rst_n.value = 1
+    dut.reset_n.value = 1
     await Timer(1, units="ns")
 
     print("reset done !")
