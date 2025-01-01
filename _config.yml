@@ -14,7 +14,7 @@ timezone: Europe/Monaco
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: BRH - French SoC enjoyer # the main title
+title: BRH - Engineering Blog # the main title
 
 tagline: Full access to tutorials, posts & ressources. # it will display as the subtitle
 
