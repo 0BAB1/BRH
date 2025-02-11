@@ -20,11 +20,11 @@ When it comes to starting a new project in a manufacturing company, determining 
 
 And a big part of the costs on a production line are directly linked to the workforce cost.
 
-The thing is workers can do many things, and if you production line only occupies them @ 50% of their working time, this means they still have some time to convert into sweet added value (*aka money*).
+The thing is workers can do many things, and if you production line only occupies 50% of their working time, this means they still have some time to convert into sweet added value (*aka money*).
 
 In this post, we'll review a technique called "Real Time Scheduling" but applied to prodctions line in order to determine the workforce costs linked to a production line.
 
-> "Real Time Scheduling" is a technique mostly used in embedded systems, electronics, ... But any system involving some periodic scheluding can be treated as a real-time system to some degree, **especially** production lines !
+> "Real Time Scheduling" is a technique mostly used in the embedded systems field. But any system involving some periodic scheluding can be treated as a real-time system to some degree, **especially** production lines !
 {: .prompt-tip }
 
 So I'll let you do some reading on real time system for definitions, but I think an example is worth more than (boring) definitions so let's check out an example now !
@@ -168,7 +168,14 @@ We see our worker is very busy at the beginning ! Given the facts that they are 
 
 ## Conclusion
 
-We now have a very interresting tool to determine our worker dedication to a production line to enhance our cost estimates and planification of the worforce.
+We now have a very interresting tool to determine
+
+- Our worker dedication to a production line to enhance our cost estimates and planification of the worforce.
+- The number of worker we should hire.
+- Whether or not our actual production rate meets orders deadlines.
+
+Of course, beacause this tools comes from embedded system, you will have to tinker the way you model the worker differently depending on the final need.
+For example, When I used this technique to plan production line IRL, I used a slightly different model where I first pick a periodicity based on the largest task and applied industry standard coefficient to take the worker's experience and task complexity into account.
 
 This real time analysis tool was meant for very accurate system, so there is still room for interpretation and tweaking for our application.
 
