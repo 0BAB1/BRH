@@ -1,14 +1,11 @@
 ---
 title: "Cocotb : Project setup tips & AXI verification"
 date: 2024-11-21 15:00:00 +0800
-categories: [Tutorials, Testbench]
-tags: [fpga, testbench, design, cocotb, verilator, axi]
+categories: [Tutorials]
+tags: [fpga, software]
 pin: false
 math: false
 mermaid: false
-image:
-  path: https://image.noelshack.com/fichiers/2024/47/4/1732198043-capture.jpg
-  alt: Cocotb waveforms example on my HOLY CORE course
 ---
 <!-- FINAL NAME : 2024-11-21-TIPS_FOR_COCOTB -->
 <!-- TODO : Add illustrations -->
@@ -526,4 +523,8 @@ I will not insult you with some meaningless LLM generated outro to "open the sub
 
 That's all there is to it.
 
-You can leave a comment below if you have any question or contact me directly.
+Thank you for reading to this point. You can write a comment below if you have any question.
+
+*Godspeed*
+
+-BRH

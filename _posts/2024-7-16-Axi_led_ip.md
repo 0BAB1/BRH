@@ -1,14 +1,11 @@
 ---
 title: Build you own 1st AXI LED IP
 date: 2024-7-16 15:00:00 +0800
-categories: [Tutorials, Zynq]
-tags: [zynq, fpga, xilinx, beginner]
+categories: [Tutorials]
+tags: [fpga]
 pin: false
 math: false
 mermaid: false
-image:
-  path: https://www.researchgate.net/publication/351705470/figure/fig5/AS:1025414466121737@1621489268475/Xilinx-Zynq-7000-AP-SoC-architecture.png
-  alt: Zynq SoC
 ---
 # Building your own AXI LED IP
 
@@ -72,3 +69,9 @@ Here are some resources to debug AXI interfaces if you'd like to try more advanc
 - [Xilinx AXI VIP, use it for your projects &amp; access testbenches](https://www.xilinx.com/video/hardware/how-to-use-axi-verification-ip-to-verify-debug-design-using-simulation.html)
 
 ![AXI VIP Img](https://support.xilinx.com/sfc/servlet.shepherd/version/renditionDownload?rendition=THUMB720BY480&versionId=0682E00000SUfk7&operationContext=CHATTER&contentId=05T2E00001lMXoT&page=0)
+
+GLHF
+
+*Godspeed*
+
+-BRH

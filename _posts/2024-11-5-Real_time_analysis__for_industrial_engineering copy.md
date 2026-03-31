@@ -1,14 +1,11 @@
 ---
-title: Real Time Analysis for Production Lines (Determining worker occupation time)
+title: Exploring Real Time Analysis for Production Lines
 date: 2024-11-5 15:00:00 +0800
-categories: [Projects, Industrial_engineering]
-tags: [industrial_engineering, real_time_systems]
+categories: [Tutorials]
+tags: [industry, thoughts]
 pin: false
 math: false
 mermaid: false
-image:
-  path: https://image.noelshack.com/fichiers/2024/45/2/1730808631-thumbnail.png
-  alt: Worker occupation time simulation thumbnail
 ---
 
 ## Using Real Time (RT) Analysis to Compute Worker Occuption on a Production Line
@@ -186,5 +183,11 @@ This post was meant to introduce the reader to this tool. Similar solutions incl
 
 > If you need clarifications, do not hesitate to contact me, or leave a comment below.
 {: .prompt-info }
+
+Thank you for reading to this point. You can write a comment below if you have any question.
+
+*Godspeed*
+
+-BRH
 
 [^1]: Calculation based on the number of parts, the number of real worked hours, etc... (Out of the scope of this post)

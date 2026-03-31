@@ -1,14 +1,11 @@
 ---
-title: Implementing an AI Model IP (from FINN) in VIVADO on Xilinx FPGA
+title: "FINN : Pytorch AI on FPGA Part 2"
 date: 2024-10-25 15:00:00 +0800
-categories: [Tutorials, Fpga_ai]
-tags: [ai, python, fpga]
+categories: [Tutorials]
+tags: [ai, software, fpga]
 pin: false
 math: false
 mermaid: false
-image:
-  path: https://image.noelshack.com/fichiers/2024/44/7/1730629387-image-py2-fpga-2l.jpg
-  alt: Tutorial 2 = Manual IP Inference
 ---
 
 ## Manual inference : A "bonus" sub-tutorial
@@ -142,3 +139,9 @@ Do not hesitate to open an Issue or contact if you have a problem. Here is a fin
 {: .prompt-tip }
 
 Quick note : I'm planning to do an ILA tutorial in the next few month in case the next videos take to much time to produce. In which case I will post the link here, In the meantime, internet is full of tutorials for this, they just tend to not be the best quality...
+
+Thank you for reading to this point. You can write a comment below if you have any question.
+
+*Godspeed*
+
+-BRH

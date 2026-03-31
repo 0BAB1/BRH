@@ -1,14 +1,11 @@
 ---
 title: "Direct Memory Access (DMA) : A hands on Zynq example"
 date: 2024-7-21 15:00:00 +0800
-categories: [Tutorials, Zynq]
-tags: [fpga, beginner, C]
+categories: [Tutorials]
+tags: [fpga]
 pin: false
 math: false
 mermaid: false
-image:
-  path: https://media.geeksforgeeks.org/wp-content/uploads/20240109112312/screen.png
-  alt: DMA Overview
 ---
 
 # DMA Tutorial : A hands-on example using Fast Fourier Transform (FFT) IP
@@ -56,3 +53,7 @@ In this part, We break down the firmware code logic and make our own firmaware s
 
 > IMPORTANT NOTE if you plan on using UART like in the tutorial : do not use ```xil_printf()``` but rather ```printf()``` to handle the display of floats correctly.
 {: .prompt-warning }
+
+*Godspeed*
+
+-BRH

@@ -2,13 +2,10 @@
 title: "HOLY CORE : My biggest project"
 date: 2025-09-28 15:00:00 +0800
 categories: [Projects]
-tags: [fpga, cpu]
+tags: [fpga, thoughts]
 pin: false
 math: false
 mermaid: false
-image:
-  path: https://raw.githubusercontent.com/0BAB1/HOLY_CORE_COURSE/refs/heads/master/user_docs/docs/images/banner.png
-  alt: Holy Core Banner
 ---
 
 > This post is not technical but rather a way for me to share thoughts on the HOLY CORE project. For context, HOLY CORE is an *open source* RV32I **compliant** CPU that runs on FPGA and the entire development process is document for everyone to learn through an easy to understand course. I made some docs (yes, I did lol) here if you'd like to read more on the technical side of things. GLHF : https://0bab1.github.io/HOLY_CORE_COURSE/
@@ -135,6 +132,8 @@ But I also have to think, **again**, about the purpose of all of this. I like to
 
 ASometime, finding a purpose is hard, but I'm sure we'll figure it out !
 
-Godspeed
+Thank you for reading to this point. You can write a comment below if you have any question.
+
+*Godspeed*
 
 -BRH
