@@ -210,6 +210,86 @@ You can see this simplicty really translate in simulation where we je see stream
 
 ![KC705 image](/assets/img/mold_sim.png)
 
+This simulation is based on a cocotb/verilator tesbench. The `RGMII` signal are known to be valid & standard beause I used the `cocotbext-eth` extension.
+
+The frame data itself is a fake fixed exmaple that contains a sing ITCH `R` message at the end. It serve as a templete to deisng the initial parsers, I asked claude to generate it from the vrious IPv4/UDP/MoldUDP64 specs:
+
+```python
+# test_trademaxxer.py 
+
+# ...
+
+@cocotb.test()
+async def test_tardemaxxer_basic(dut):
+
+    # ...
+
+    rgmii_source = RgmiiSource(dut.rgmii_rxd, dut.rgmii_rx_ctl, dut.rgmii_rxc, dut.rst)
+
+    raw_data = bytes([
+        # -------------------------
+        # Ethernet Header (14B)
+        # -------------------------
+        0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,  # dst MAC (broadcast)
+        0xDE, 0xAD, 0xBE, 0xEF, 0x00, 0x01,  # src MAC
+        0x08, 0x00,                           # ethertype IPv4
+
+        # -------------------------
+        # IP Header (20B)
+        # -------------------------
+        0x45,                   # version=4, IHL=5 (20B, no options)
+        0x00,                   # DSCP/ECN
+        0x00, 0x4B,             # total length = 75B (20 IP + 8 UDP + 20 MoldUDP64 + 2 msg len + 25 ITCH R)
+        0x00, 0x00,             # identification
+        0x00, 0x00,             # flags + fragment offset
+        0x40,                   # TTL = 64
+        0x11,                   # protocol = UDP
+        0x00, 0x00,             # checksum (0 = disabled)
+        0xC0, 0xA8, 0x01, 0x01, # src IP 192.168.1.1
+        0xE9, 0x36, 0x0C, 0x6F, # dst IP 233.54.12.111 (multicast)
+
+        # -------------------------
+        # UDP Header (8B)
+        # -------------------------
+        0x30, 0x39,             # src port 12345
+        0x67, 0x48,             # dst port 26456 (ITCH)
+        0x00, 0x37,             # length = 55B (8 UDP + 20 MoldUDP64 + 2 msg len + 25 ITCH R)
+        0x00, 0x00,             # checksum disabled
+
+        # -------------------------
+        # MoldUDP64 Header (20B)
+        # -------------------------
+        0x53, 0x32, 0x30, 0x31, 0x39, 0x30, 0x31, 0x33, 0x30, 0x20,  # session "S20190130 "
+        0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01,               # sequence number = 1
+        0x00, 0x01,                                                     # message count = 1
+
+        # -------------------------
+        # MoldUDP64 message envelope
+        # -------------------------
+        0x00, 0x19,             # message length = 25B (ITCH Stock Directory R)
+
+        # -------------------------
+        # ITCH Stock Directory (type R) - 25B
+        # -------------------------
+        0x52,                   # message type 'R'
+        0x00, 0x2A,             # stock locate = 42  (AAPL = 42 today)
+        0x00, 0x01,             # tracking number (bloat)
+        0x00, 0x00, 0x00, 0x00, 0x00, 0x00,  # timestamp (nanoseconds since midnight)
+        0x41, 0x41, 0x50, 0x4C, 0x20, 0x20, 0x20, 0x20,  # symbol "AAPL    " (8B space padded)
+        0x4E,                   # market category 'N' (Nasdaq)
+        0x00,                   # financial status indicator
+        0x00, 0x00, 0x00, 0x01, # round lot size = 1
+        0x4E,                   # round lots only 'N'
+    ])
+
+    await rgmii_source.send(GmiiFrame.from_payload(raw_data))
+
+    # ...
+    
+```
+
+In hte future, we'll use real nasdaq data as the give bianry outputs that we can use for this purpose.
+
 ## Upcomming Work
 
 Now we have to deisng a ITCH bookkeeper, that will decode the nature of the incomming messages and act uppon an order list + "price ladder". The goal will be to only cover a single stock like `APPL` to keep things simple as that is just a demo.
