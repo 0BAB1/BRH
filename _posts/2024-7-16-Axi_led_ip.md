@@ -1,8 +1,8 @@
 ---
-title: Build you own 1st AXI LED IP
+title: Build your FIRST LED on te Zynq SoC (Xilinx FPGA + MCU SoCs)
 date: 2024-7-16 15:00:00 +0800
 categories: [Tutorials]
-tags: [fpga]
+tags: [fpga, software]
 pin: false
 math: false
 mermaid: false
