@@ -16,10 +16,10 @@ timezone: Europe/Monaco
 
 title: BRH - Engineering Blog # the main title
 
-tagline: Sharing technical content and personal thoughts. # it will display as the subtitle
+tagline: Sharing technical content and personal thoughts.<br/><br/>0% AI Slop Certified. # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
-  Full access to tutorials, posts & ressources.
+  Sharing technical content and personal thoughts. 0% AI Slop Certified.
 
 # Fill in the protocol & hostname for your site.
 # E.g. 'https://username.github.io', note that it does not end with a '/'.
