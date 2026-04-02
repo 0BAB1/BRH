@@ -10,16 +10,16 @@ mermaid: false
 
 ## Manual inference : A "bonus" sub-tutorial
 
-> **This post is a follow up to the ["python to FPGA tutorial"](https://0bab1.github.io/BRH/posts/PY2FPGA/)** . It covers the necessary process to manually implement the output IP from FINN in a design using VIVADO, DMA and many more !
 {: .prompt-info }
+> **This post is a follow up to the ["python to FPGA tutorial"](https://0bab1.github.io/BRH/posts/PY2FPGA/)** . It covers the necessary process to manually implement the output IP from FINN in a design using VIVADO, DMA and many more !
 
 Based on this [video](https://www.youtube.com/watch?v=VsXMlSB6Yq4).
 {% include embed/youtube.html id='VsXMlSB6Yq4' %}
 
 ## [REPO RESOURCES HERE](https://github.com/0BAB1/BRH_Tutorials/tree/main/8%20Python%20to%20FPGA/3_manual_inference)
 
-> This part is not like the others, it will be hard for you to do it 100% on your own **if you are a beginner.** The video will contain more details on this part (and include a bit of debugging insights). Use the video as support to help you getting through this part ! I also expect the reader to have some knowledge with xilinx tools. If you are a complete beginner, check the ressource from the [main tutorial](https://0bab1.github.io/BRH/posts/PY2FPGA/) or some of my [tutorials on Zynq hardware](https://www.youtube.com/watch?v=DQHTSelupDs&list=PLCn4eX6oSgMbgI4WERry0XnHiVysNqtGc).
 {: .prompt-warning }
+> This part is not like the others, it will be hard for you to do it 100% on your own **if you are a beginner.** The video will contain more details on this part (and include a bit of debugging insights). Use the video as support to help you getting through this part ! I also expect the reader to have some knowledge with xilinx tools. If you are a complete beginner, check the ressource from the [main tutorial](https://0bab1.github.io/BRH/posts/PY2FPGA/) or some of my [tutorials on Zynq hardware](https://www.youtube.com/watch?v=DQHTSelupDs&list=PLCn4eX6oSgMbgI4WERry0XnHiVysNqtGc).
 
 ## Why manual inference ?
 
