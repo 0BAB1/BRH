@@ -136,3 +136,9 @@ You can see the orders come in and get executed as time goes by. Very cool.
 Here is a focus on a single order being saved (state update to BRAM internally) and then transmitting the adequate state changes to the future price ladder:
 
 ![order book zoom on tb](/assets/img/zoom_orderbook_integration_tb.png)
+
+Thank you for reading to this point. You can write a comment below if you have any questions.
+
+*Godspeed*
+
+-BRH
