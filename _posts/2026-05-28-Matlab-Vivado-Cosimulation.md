@@ -238,7 +238,7 @@ So I import my HDL Module by going into Apps > HDL Verifier > *Open HDL Vrifier 
 
 Once this is done, I fix all the bugs using the guide above (there **WILL** be bugs) and Once the simulation accepts to "Run" withou any I/Os, I add some dummy I/Os, in my case, some 10kHz & 11kHz sine waves + some scopes to check out what's going on in this dummy example.
 
-![Simulink Cosim Setup](../assets/img/simulink_cosim_setup.png)
+![Simulink Cosim Setup](/assets/img/simulink_cosim_setup.png)
 
 Just a point of attention this Simulink setup you just saw, you will need to adapt the Inputs to the ridgt data type, I personnally use MATLAB function block that uses the `fi()` object before the input :
 
@@ -266,7 +266,7 @@ end
 
 Here is the scope result after getting the timlescale right (1s = 1000000000ns):
 
-![Cosim Scope results after debugging some stuff](../assets/img/simulink_cocsim_scope.png)
+![Cosim Scope results after debugging some stuff](/assets/img/simulink_cocsim_scope.png)
 
 Not too shaby, if we ignore the top lef and bottom right, where number did not go through any sign interpretation layer.
 
@@ -363,7 +363,7 @@ async def sine_response_test(dut):
 
 And I got **confirmation that the Simulink results were indeed looking good**:
 
-![cocotb result for comparison](../assets/img/cocotb_cosim_conf.png)
+![cocotb result for comparison](/assets/img/cocotb_cosim_conf.png)
 
 Amplitude, shape and timing seems to match, so we can now be confident that our setup is, **finally** done.
 
