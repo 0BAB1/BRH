@@ -369,6 +369,43 @@ Amplitude, shape and timing seems to match, so we can now be confident that our 
 
 Now, we may start to actually woprk ! Thank you Mathwork ! (bruh)
 
+## UPDATES
+
+In this sections, I will add new fixes i found along the way.
+
+### Fixing : "Error while obtaining sizes from MEX S-function"
+
+My error message:
+
+```txt
+Error:Error while obtaining sizes from MEX S-function 'shdlcosimxsi' in '<blablabl>'.
+Caused by:
+    Unexpected Standard exception from MEX file.
+What() is:basic_string::_M_construct null not valid
+..
+
+```
+
+This error happenned to me because an LUT in the designed was depending on some `.mem` file.
+
+The best fix for me, was to make the path to this mem file a fixed path to tmp: `/tmp/<mem file>.mem`.
+
+```verilog
+// setting the path as a const prarm to /tmp/
+parameter ATAN2_MEM_PATH = "/tmp/atan2_table_signed.mem",
+
+// Load mem file into a ROM in systemVerilog
+initial begin
+    $readmemh(MEM_PATH, rom);
+end
+```
+
+This allows you to easily drop your mem files in /tmp/ and then allows matlab/vivado to hve an easy fixed access to it, which doe exist across all Linux machine.
+
+The only problem is that you need to generate and place the `.mem` file in /tmp on each new machine and after each reboot.
+
+I personnally documented that at my job in a cosimulation procedure file. But given /tmp exist everywhere, you could easily automate this setup.
+
 ## Conclusion
 
 And off we go to a better simulation model ! Hope this HDL Verifer troubles verview was useful. This post is mainly a way for we to have some cheat sheets in case I need to have to do the setup again, but who knows, maybe someone will find it helpful !
