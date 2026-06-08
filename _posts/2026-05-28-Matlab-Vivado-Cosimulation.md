@@ -210,9 +210,9 @@ Of course, you want to aim for 1 second = 1 second so that your sim is as close 
 
 To set this up, double click on the HDL imported module > Timescales > Show Times and suggested timescales.
 
-You want the suggested timescales to be 1s = 1s.
+**You want the suggested timescales to be 1s = 1s.**
 
-But you may not have such recommendation fot he following reasons:
+But you may bu suggested this sweet spot for he following reasons:
 
 1. Your ports sampling rates are not set right (double click the block and > Ports > set all the sampling times to your clock perdiod).
 2. Your clock is not set right.
