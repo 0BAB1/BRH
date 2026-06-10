@@ -226,6 +226,8 @@ If your matlab launch script is well setup, libraries should be found, meaning t
 
 If vivado successfully built the simulation files, that means you still have some library tinkering to do. refer to the "Installing FTD2XX Drivers." chapter.
 
+> Especially, if you have `Failed to load shared library "xsim.dir/design/xsimk.so". librdi_simulator_kernel.so`, really take the time to setup your matlab launch script includes ! Link to a related support blog post: [here](https://fr.mathworks.com/matlabcentral/answers/2033584-error-failed-to-load-shared-library-xsim-dir-design-xsimk-so)
+
 ## The Actual Cosimulation
 
 Okay, after all of this, you *may* finally be granted the right to run you simulation.
