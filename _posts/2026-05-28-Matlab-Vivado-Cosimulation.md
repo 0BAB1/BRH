@@ -212,9 +212,9 @@ To set this up, double click on the HDL imported module > Timescales > Show Time
 
 **You want the suggested timescales to be 1s = 1s.**
 
-But you may bu suggested this sweet spot for he following reasons:
+But you may not be suggested this sweet spot by matlab for the following reasons:
 
-1. Your ports sampling rates are not set right (double click the block and > Ports > set all the sampling times to your clock perdiod).
+1. Your ports sampling rates are not set right (double click the block and > Ports > set all the sampling times to your clock perdiod). Is personnaly set this sample rate at my clock rate and it fixes the `1s =/= 1s` problems almost every time.
 2. Your clock is not set right.
 3. Your clock needs to be a multiple of the precison. (I recommend setting precision to 1ps to avoid worrying about that).
 
