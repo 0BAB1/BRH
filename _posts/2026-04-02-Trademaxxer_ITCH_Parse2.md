@@ -10,7 +10,7 @@ mermaid: false
 
 ## Introduction
 
-In [the last post](https://0bab1.github.io/BRH/posts/Trademaxxer_ITCH_Parse/) I presented you the basics of an ITCH Parser FSM and we stopped when we had a basic parser able to parse a premade 'A' order and commit basic state changes (even though we still don't have a state to change but that will come later).
+In [the last post](https://hugobrh.dev/posts/Trademaxxer_ITCH_Parse/) I presented you the basics of an ITCH Parser FSM and we stopped when we had a basic parser able to parse a premade 'A' order and commit basic state changes (even though we still don't have a state to change but that will come later).
 
 But before moving on, we need to have solid support of the following ITCH events :
 

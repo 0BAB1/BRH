@@ -21,7 +21,7 @@ In the previous posts, we designed an entire custom ITCH parser, going all the w
 **Focus on the ladder:**
 ![Scheme 3: Focus on the ladder](/assets/img/price_ladder_datapath.png)
 
-And as we saw [in the previous post's result analysis](https://0bab1.github.io/BRH/posts/Trademaxxer_Price_ladder/), we had some pretty promising results:
+And as we saw [in the previous post's result analysis](https://hugobrh.dev/posts/Trademaxxer_Price_ladder/), we had some pretty promising results:
 
 ![Ladder state results](/assets/img/price_ladder_dump.png)
 

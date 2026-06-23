@@ -272,7 +272,7 @@ end
 
 > Also notice the Zero order hold do turn the continuous sine signal into a discrete one, with a hold time  of 5ns, as my DUT runs at 200MHz.
 
-And on the ouput, just like in my [cocotb testbenches](https://0bab1.github.io/BRH/posts/TIPS_FOR_COCOTB/), I use a condition to interpret the outputs as a signed number.
+And on the ouput, just like in my [cocotb testbenches](https://hugobrh.dev/posts/TIPS_FOR_COCOTB/), I use a condition to interpret the outputs as a signed number.
 
 ```Matlab
 % Output interpretation as 51 bits signed numer
