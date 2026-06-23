@@ -1,5 +1,6 @@
 ---
 title: "Pytorch AI on FPGA - FINN & VIVADO Tutorial P2"
+description: "Learn how to run PyTorch neural network inference on FPGA manually using FINN, Vivado and Vitis. Covers AXI Stream glue logic design, DMA integration and bare-metal C firmware on Zynq."
 date: 2024-10-26 15:00:00 +0800
 categories: [Tutorials]
 tags: [ai, software, fpga]

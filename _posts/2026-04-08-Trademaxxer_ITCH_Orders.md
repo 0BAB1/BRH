@@ -1,5 +1,6 @@
 ---
 title: "FPGA HFT Order Book: Part 4, Order Tracking in BRAM"
+description: "Implementing an FPGA order book in BRAM for a NASDAQ ITCH 5.0 trading system. Covers order reference hashing to fit 64-bit refs into a 17-bit address space, datapath design and cocotb integration testing with real market data."
 date: 2026-04-08 16:00:00 +0800
 categories: [Projects]
 tags: [finance, fpga]

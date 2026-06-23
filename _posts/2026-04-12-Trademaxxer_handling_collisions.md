@@ -1,5 +1,6 @@
 ---
 title: "FPGA HFT Order Book: Part 6, Hash Table XOR Folding for Order References"
+description: "Reducing BRAM address collisions in an FPGA order book using XOR folding to hash 64-bit NASDAQ order references into a 17-bit address space. Benchmarked against real ITCH market data on high and low volume stocks."
 date: 2026-04-12 16:00:00 +0800
 categories: [Projects]
 tags: [finance, fpga]

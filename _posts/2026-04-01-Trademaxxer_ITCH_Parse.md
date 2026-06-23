@@ -1,5 +1,6 @@
 ---
 title: "FPGA HFT Order Book: Part 2, NASDAQ ITCH 5.0 FSM Parser"
+description: "Designing a NASDAQ ITCH 5.0 message parser in SystemVerilog for an FPGA order book. Covers FSM architecture for on-the-fly message decoding, state commit logic and AXI Stream backpressure questions at high fabric frequencies."
 date: 2026-04-01 16:00:00 +0800
 categories: [Projects]
 tags: [finance, fpga]

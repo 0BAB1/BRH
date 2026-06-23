@@ -1,5 +1,6 @@
 ---
 title: "Editing Youtube Videos is Hard - THOUGHTS"
+description: "Honest thoughts on my early Youtube journey, covering deeply technical subjects, with a touch of humour."
 date: 2026-03-30 22:00:00 +0800
 categories: [Thoughts]
 tags: [youtube, thoughts]

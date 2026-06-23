@@ -1,5 +1,6 @@
 ---
 title: "Running DOOM on a Homemade CPU (HOLY CORE)"
+description: "Running DOOM on a homemade RISC-V CPU implemented on FPGA. A deep dive into cache optimizations, hardware multiplication with DSPs and SPI display integration on the HOLY CORE softcore."
 date: 2026-01-26 16:00:00 +0800
 categories: [Projects]
 tags: [software, fpga]

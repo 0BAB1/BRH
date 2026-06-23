@@ -1,5 +1,6 @@
 ---
 title: Real Time Analysis & Industrial Planning
+description: "Applying real-time scheduling theory from embedded systems to production line planning — workforce occupation estimation, Liu and Layland feasibility analysis and simulation with Cheddar."
 date: 2024-11-5 15:00:00 +0800
 categories: [Tutorials]
 tags: [industry, thoughts]

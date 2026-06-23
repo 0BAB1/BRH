@@ -1,5 +1,6 @@
 ---
 title: "Cocotb : Project Setup, AXI Verification & Workflow"
+description: "Cocotb project setup, testbench patterns and AXI interface verification using cocotbext-axi. A practical walkthrough with Verilator, SystemVerilog interfaces and AxiRam slave simulation."
 date: 2024-11-21 15:00:00 +0800
 categories: [Tutorials]
 tags: [fpga, software]

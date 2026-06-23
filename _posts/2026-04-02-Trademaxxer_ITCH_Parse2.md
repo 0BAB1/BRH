@@ -1,5 +1,6 @@
 ---
 title: "FPGA HFT Order Book: Part 3, Verifying ITCH 5.0 Parser with cocotb"
+description: "Verifying a NASDAQ ITCH 5.0 parser on FPGA using cocotb, cocotbext-eth and real market data binary files. Covers testbench architecture, itchfeed integration and filtering live order flow for targeted RTL debugging."
 date: 2026-04-02 16:00:00 +0800
 categories: [Projects]
 tags: [finance, fpga]

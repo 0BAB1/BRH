@@ -1,5 +1,6 @@
 ---
 title: "MATLAB/Vivado HDL Cosimulation: Full Setup Guide & First Simulation"
+description: "A practical setup guide for MATLAB/Vivado HDL cosimulation on Linux. Covers version compatibility, FTD2XX and Digilent Adept driver installation, library path fixes and timescale configuration to get SystemVerilog modules running inside Simulink."
 date: 2026-05-28 16:00:00 +0800
 categories: [Tutorials]
 tags: [fpga, software]

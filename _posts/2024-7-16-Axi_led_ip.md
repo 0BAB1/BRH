@@ -1,5 +1,6 @@
 ---
 title: Zynq Custom IP (AXI LED) Workflow Overview - Vivado/Vitis Tutorial
+description: "Learn how to build a custom AXI LED IP on Zynq from scratch. Full Vivado and Vitis walkthrough covering AXI Lite interface design, block diagrams, and bare-metal software on the Zynq PS."
 date: 2024-7-16 15:00:00 +0800
 categories: [Tutorials]
 tags: [fpga, software]

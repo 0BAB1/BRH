@@ -1,5 +1,6 @@
 ---
 title: "FPGA HFT Order Book: Part 5, Price Ladder Implementation on FPGA"
+description: "Building an FPGA price ladder as an AXI4 Lite slave for a NASDAQ ITCH order book. Covers BRAM based bid/ask quantity tracking, a 2 stage pipeline datapath, cocotb verification and full system integration with real 2019 market data."
 date: 2026-04-11 16:00:00 +0800
 categories: [Projects]
 tags: [finance, fpga]
