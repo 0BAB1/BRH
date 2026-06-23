@@ -1,5 +1,5 @@
 ---
-title: "Trademaxxing part4 : Orders Bookkeeping"
+title: "FPGA HFT Order Book: Part 4, Order Tracking in BRAM"
 date: 2026-04-08 16:00:00 +0800
 categories: [Projects]
 tags: [finance, fpga]

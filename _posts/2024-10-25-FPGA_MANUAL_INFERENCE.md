@@ -1,6 +1,6 @@
 ---
-title: "FINN : Pytorch AI on FPGA Part 2"
-date: 2024-10-25 15:00:00 +0800
+title: "Pytorch AI on FPGA - FINN & VIVADO Tutorial P2"
+date: 2024-10-26 15:00:00 +0800
 categories: [Tutorials]
 tags: [ai, software, fpga]
 pin: false

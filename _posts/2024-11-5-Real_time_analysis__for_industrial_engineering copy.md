@@ -1,5 +1,5 @@
 ---
-title: Exploring Real Time Analysis for Production Lines
+title: Real Time Analysis & Industrial Planning
 date: 2024-11-5 15:00:00 +0800
 categories: [Tutorials]
 tags: [industry, thoughts]

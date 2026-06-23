@@ -1,5 +1,5 @@
 ---
-title: "HOLY CORE : My biggest project"
+title: "HOLY CORE : My Biggest project - THOUGHTS"
 date: 2025-09-28 15:00:00 +0800
 categories: [Projects]
 tags: [fpga, thoughts]

@@ -1,5 +1,5 @@
 ---
-title: "Trademaxxing part3 : Testing our ITCH Parser"
+title: "FPGA HFT Order Book: Part 3, Verifying ITCH 5.0 Parser with cocotb"
 date: 2026-04-02 16:00:00 +0800
 categories: [Projects]
 tags: [finance, fpga]

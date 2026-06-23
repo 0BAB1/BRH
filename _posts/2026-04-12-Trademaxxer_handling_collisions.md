@@ -1,5 +1,5 @@
 ---
-title: "Trademaxxing part6 : Lowering Order Ref Collisions (Hash : XOR Folding)"
+title: "FPGA HFT Order Book: Part 6, Hash Table XOR Folding for Order References"
 date: 2026-04-12 16:00:00 +0800
 categories: [Projects]
 tags: [finance, fpga]

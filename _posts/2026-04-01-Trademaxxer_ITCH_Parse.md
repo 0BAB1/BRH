@@ -1,5 +1,5 @@
 ---
-title: "Trademaxxing part2 : ITCH Parsing FSM"
+title: "FPGA HFT Order Book: Part 2, NASDAQ ITCH 5.0 FSM Parser"
 date: 2026-04-01 16:00:00 +0800
 categories: [Projects]
 tags: [finance, fpga]

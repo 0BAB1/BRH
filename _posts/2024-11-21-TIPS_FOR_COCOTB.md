@@ -1,5 +1,5 @@
 ---
-title: "Cocotb : Project setup tips & AXI verification"
+title: "Cocotb : Project Setup, AXI Verification & Workflow"
 date: 2024-11-21 15:00:00 +0800
 categories: [Tutorials]
 tags: [fpga, software]

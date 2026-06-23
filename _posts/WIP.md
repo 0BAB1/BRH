@@ -1,5 +1,5 @@
 ---
-title: "Trademaxxing part7 : Getting Rid of Order Ref Collisions"
+title: "FPGA HFT Order Book: Part 7, Collision-Free Hash Table on FPGA"
 date: 2026-06-30 16:00:00 +0800
 categories: [Projects]
 tags: [finance, fpga]

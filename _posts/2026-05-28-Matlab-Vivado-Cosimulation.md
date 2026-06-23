@@ -1,5 +1,5 @@
 ---
-title: "Matlab & Vivado Cosimulation: Entire Setup & First Runs"
+title: "MATLAB/Vivado HDL Cosimulation: Full Setup Guide & First Simulation"
 date: 2026-05-28 16:00:00 +0800
 categories: [Tutorials]
 tags: [fpga, software]

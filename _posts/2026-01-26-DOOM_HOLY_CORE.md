@@ -1,5 +1,5 @@
 ---
-title: "Running DOOM on the HOLY CORE (Homemade CPU)"
+title: "Running DOOM on a Homemade CPU (HOLY CORE)"
 date: 2026-01-26 16:00:00 +0800
 categories: [Projects]
 tags: [software, fpga]
@@ -14,7 +14,6 @@ Long story short, I made a CPU, the HOLY CORE. It is pretty simple yet pretty ma
 
 - [Github Link](https://github.com/0BAB1/HOLY_CORE_COURSE)
 - [Docs](https://0bab1.github.io/HOLY_CORE_COURSE/)
-- [My first post with my thoughts](https://hugobrh.dev/posts/HOLY_CORE_TALK-copy/)
 
 At some point, I wanted to take the whole thing a step further, as I implemented MANY features (check the DOCs for more infos) but how good are these features when I can't really show *what* it does ?
 

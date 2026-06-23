@@ -1,5 +1,5 @@
 ---
-title: "Direct Memory Access (DMA) : A hands on Zynq example"
+title: "Direct Memory Access (DMA): A Hands on Zynq Example"
 date: 2024-7-21 15:00:00 +0800
 categories: [Tutorials]
 tags: [fpga]

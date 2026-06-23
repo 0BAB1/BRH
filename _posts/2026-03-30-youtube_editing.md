@@ -1,5 +1,5 @@
 ---
-title: "Editing Youtube Videos is Hard"
+title: "Editing Youtube Videos is Hard - THOUGHTS"
 date: 2026-03-30 22:00:00 +0800
 categories: [Thoughts]
 tags: [youtube, thoughts]

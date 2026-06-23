@@ -1,5 +1,5 @@
 ---
-title: Build your FIRST LED on te Zynq SoC (Xilinx FPGA + MCU SoCs)
+title: Zynq Custom IP (AXI LED) Workflow Overview - Vivado/Vitis Tutorial
 date: 2024-7-16 15:00:00 +0800
 categories: [Tutorials]
 tags: [fpga, software]

@@ -1,5 +1,5 @@
 ---
-title: "Trademaxxing part1 : Parsing MoldUDP64"
+title: "FPGA HFT Order Book: Part 1, MoldUDP64 Parser in SystemVerilog"
 date: 2026-03-31 15:00:00 +0800
 categories: [Projects]
 tags: [finance, fpga]
