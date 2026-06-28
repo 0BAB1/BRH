@@ -59,6 +59,10 @@ At first, I built an open-loop prototype on a perfboard, using an ATmega328p mic
 
 ![ESC Prototype](../assets/img/esc_perfboard.png)
 
+You can also watch my youtube video to check out the openloop demo build, with a touch of humor:
+
+{% include embed/youtube.html id='er2wTDLapBc' %}
+
 {: .prompt-info }
 > This video will also give more details on the mechanisms like driving MOSFETs and the open loop circuitry.
 
@@ -80,7 +84,7 @@ But after seeing the manufacturing cost for prototypes, I decided to lower my BO
 
 ## PCB design
 
-So I made this PCB in KiCad, which is the Revision B, featuring an STM32 (F051 series) MCU instead of an Atmega328p:
+So I made this PCB in KiCad, which is the Revision B, featuring an STM32 (F051 series) MCU instead of an Atmega328p (as well as cheaper MOSFET as the REVA had 140(/5)$ of mosfets on it...):
 
 ![ESC REV B (STM32 Based) front](../assets/img/esc_revB_front.png)
 
