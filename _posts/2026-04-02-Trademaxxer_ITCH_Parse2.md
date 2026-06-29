@@ -41,6 +41,8 @@ The idea is to stop using a single pre-tailored ethernet frame message and start
 
 Nasdaq does provide such binary files, but they are **HUGE** (8GB lol) and I don't really know how to parse them, and learning to parse them correctly would not be that hard but designing a software parser does feel like a loss of time when our objective is to design hardware.
 
+> We still have to download the ITCH5.0 bin feed for local testing. [Link Here](https://emi.nasdaq.com/ITCH/Nasdaq%20ITCH/). I usually go for the lighest, which is [this one (link)](https://emi.nasdaq.com/ITCH/Nasdaq%20ITCH/12302019.NASDAQ_ITCH50.gz).
+
 **BUT THERE IS A SOLUTION** to save the day:
 
 ```bash

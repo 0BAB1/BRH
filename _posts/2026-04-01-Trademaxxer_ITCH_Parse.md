@@ -28,6 +28,7 @@ Well I suggest we keep track of:
 2. The bid/asks ladder, also called "*order book*" but this is gonna be confusing so I'll refer to it as "**the ladder**".
 
 Just a side note on what these thing are: the **Order lists** is pretty explicit (keeps track of the orders state), but in case you don't know, here is what I refer to as the bid/ask "**ladder**" :
+
 ![ladder image](/assets/img/ladder.png)
 
 With that in mind, let's outline what the design shall look like:
