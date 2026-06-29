@@ -1,5 +1,6 @@
 ---
-title: "Matlab & Vivado Cosimulation: Entire Setup & First Runs"
+title: "MATLAB/Vivado HDL Cosimulation: Full Setup Guide & First Simulation"
+description: "A practical setup guide for MATLAB/Vivado HDL cosimulation on Linux. Covers version compatibility, FTD2XX and Digilent Adept driver installation, library path fixes and timescale configuration to get SystemVerilog modules running inside Simulink."
 date: 2026-05-28 16:00:00 +0800
 categories: [Tutorials]
 tags: [fpga, software]
@@ -272,7 +273,7 @@ end
 
 > Also notice the Zero order hold do turn the continuous sine signal into a discrete one, with a hold time  of 5ns, as my DUT runs at 200MHz.
 
-And on the ouput, just like in my [cocotb testbenches](https://0bab1.github.io/BRH/posts/TIPS_FOR_COCOTB/), I use a condition to interpret the outputs as a signed number.
+And on the ouput, just like in my [cocotb testbenches](https://hugobrh.dev/posts/TIPS_FOR_COCOTB/), I use a condition to interpret the outputs as a signed number.
 
 ```Matlab
 % Output interpretation as 51 bits signed numer

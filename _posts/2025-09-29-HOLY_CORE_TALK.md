@@ -1,5 +1,6 @@
 ---
-title: "HOLY CORE : My biggest project"
+title: "HOLY CORE : My Biggest project - THOUGHTS"
+description: "Thoughts on building HOLY CORE, an open source RV32IM RISC-V softcore on FPGA — the design process, what it felt like to go from simulation to real hardware, and why this project matters beyond the technical."
 date: 2025-09-28 15:00:00 +0800
 categories: [Projects]
 tags: [fpga, thoughts]

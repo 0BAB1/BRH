@@ -1,5 +1,6 @@
 ---
-title: "Trademaxxing part6 : Lowering Order Ref Collisions (Hash : XOR Folding)"
+title: "FPGA HFT Order Book: Part 6, Hash Table XOR Folding for Order References"
+description: "Reducing BRAM address collisions in an FPGA order book using XOR folding to hash 64-bit NASDAQ order references into a 17-bit address space. Benchmarked against real ITCH market data on high and low volume stocks."
 date: 2026-04-12 16:00:00 +0800
 categories: [Projects]
 tags: [finance, fpga]
@@ -21,7 +22,7 @@ In the previous posts, we designed an entire custom ITCH parser, going all the w
 **Focus on the ladder:**
 ![Scheme 3: Focus on the ladder](/assets/img/price_ladder_datapath.png)
 
-And as we saw [in the previous post's result analysis](https://0bab1.github.io/BRH/posts/Trademaxxer_Price_ladder/), we had some pretty promising results:
+And as we saw [in the previous post's result analysis](https://hugobrh.dev/posts/Trademaxxer_Price_ladder/), we had some pretty promising results:
 
 ![Ladder state results](/assets/img/price_ladder_dump.png)
 

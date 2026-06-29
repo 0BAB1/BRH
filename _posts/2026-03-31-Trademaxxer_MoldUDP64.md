@@ -1,5 +1,6 @@
 ---
-title: "Trademaxxing part1 : Parsing MoldUDP64"
+title: "FPGA HFT Order Book: Part 1, MoldUDP64 Parser in SystemVerilog"
+description: "Building an FPGA MoldUDP64 parser in SystemVerilog as the first stage of a low latency NASDAQ ITCH order book. Covers AXI Stream pipeline design, FSM based header stripping and cocotb verification with real packet data."
 date: 2026-03-31 15:00:00 +0800
 categories: [Projects]
 tags: [finance, fpga]

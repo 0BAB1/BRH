@@ -1,5 +1,6 @@
 ---
-title: "Direct Memory Access (DMA) : A hands on Zynq example"
+title: "Direct Memory Access (DMA): A Hands on Zynq Example"
+description : "Learn how to implement AXI DMA on Zynq FPGA with a hands-on FFT example. Full Vivado & Vitis walkthrough: hardware design, bare-metal firmware, and AXI Stream interfacing."
 date: 2024-7-21 15:00:00 +0800
 categories: [Tutorials]
 tags: [fpga]

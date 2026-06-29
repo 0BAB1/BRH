@@ -14,16 +14,16 @@ timezone: Europe/Monaco
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: BRH - Engineering Blog # the main title
+title: BRH's Engineering Blog # the main title
 
-tagline: Sharing technical content and personal thoughts.<br/><br/>0% AI Slop Certified. # it will display as the subtitle
+tagline: Sharing technical content and personal thoughts. 0% AI Slop Certified. # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
   Sharing technical content and personal thoughts. 0% AI Slop Certified.
 
 # Fill in the protocol & hostname for your site.
 # E.g. 'https://username.github.io', note that it does not end with a '/'.
-url: "https://0bab1.github.io"
+url: "https://hugobrh.dev"
 
 github:
   username: 0bab1 # change to your GitHub username
@@ -97,7 +97,7 @@ theme_mode: # [light | dark]
 cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar: https://avatars.githubusercontent.com/u/62248962?s=400&u=50354616fc4fd1d253daf88e569a4d40f6dcdf04&v=4
+avatar: /avatar.png
 
 # The URL of the site-wide social preview image used in SEO `og:image` meta tag.
 # It can be overridden by a customized `page.image` in front matter.
@@ -145,10 +145,10 @@ pwa:
     deny_paths:
       # - "/example"  # URLs match `<SITE_URL>/example/*` will not be cached by the PWA
 
-paginate: 10
+paginate: 20
 
 # The base URL of your site
-baseurl: "/BRH"
+baseurl: ""
 
 # ------------ The following options are not recommended to be modified ------------------
 

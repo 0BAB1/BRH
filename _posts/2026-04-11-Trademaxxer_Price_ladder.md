@@ -1,5 +1,6 @@
 ---
-title: "Trademaxxing part5 : Ladder Bookkeeping"
+title: "FPGA HFT Order Book: Part 5, Price Ladder Implementation on FPGA"
+description: "Building an FPGA price ladder as an AXI4 Lite slave for a NASDAQ ITCH order book. Covers BRAM based bid/ask quantity tracking, a 2 stage pipeline datapath, cocotb verification and full system integration with real 2019 market data."
 date: 2026-04-11 16:00:00 +0800
 categories: [Projects]
 tags: [finance, fpga]
@@ -81,7 +82,7 @@ So we'll use the `cocotbext.axi` extension.
 
 {: .prompt-info }
 
-> if you need more infos on the code and people behind it, I have a dedicated blog post / tutorial on that [(Link)](https://0bab1.github.io/BRH/posts/TIPS_FOR_COCOTB/)
+> if you need more infos on the code and people behind it, I have a dedicated blog post / tutorial on that [(Link)](https://hugobrh.dev/posts/TIPS_FOR_COCOTB/)
 
 To also make things a bit tight regarding the interface, I like to use [pulp platform AXI interface declarations](https://github.com/pulp-platform/axi/blob/master/src/axi_intf.sv) and import them into the project, this way, if I use one of their AXI IPs in the future, I can just drop in their code, but this is just syntax so I'll stop yapping and start presenting some results.
 
@@ -97,7 +98,7 @@ So now "all that's left to do is to plug the price ladder into the main **TRADEM
 
 > Reminder: the top level trademaxxer contains the whole ethernet MAC, the MoldUDP and ITCH parser + order book and now the price ladder as well. The input of this simulation are "real" (standard) ethernet frames built from the ITCH data provided by the NASDAQ itself, so the result below ran on a real trading day that happened back in 2019 or something, not sure of the exact date tbh)
 
-To make this simulation a bit more understandable, at the end of it, we'll simulate (using [a cocotb extension](https://0bab1.github.io/BRH/posts/TIPS_FOR_COCOTB/)) an AXI LITE master that will recover the entire price ladder and we'll dump the result in a nice text file we can observe to find the obvious issues. (spoiler, there will be some, nothing ever works first try anyway).
+To make this simulation a bit more understandable, at the end of it, we'll simulate (using [a cocotb extension](https://hugobrh.dev/posts/TIPS_FOR_COCOTB/)) an AXI LITE master that will recover the entire price ladder and we'll dump the result in a nice text file we can observe to find the obvious issues. (spoiler, there will be some, nothing ever works first try anyway).
 
 And after some debugging, here is the result on a simulation that sent to our DUT the first 5000 messages of the trading day that are related to the AAPL stock, under the form of ethernet frames of course (yes I switched back to AAPL to get some volume, otherwise the parser takes ages (2 minutes) to find relevant messages)
 
