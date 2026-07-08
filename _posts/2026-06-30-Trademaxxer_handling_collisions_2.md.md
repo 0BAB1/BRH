@@ -14,9 +14,13 @@ mermaid: false
 
 In the previous posts, we designed an entire custom ITCH parser, going all the way from raw ethernet parsing to having a market state.
 
-We also, in the [part6 post](https://hugobrh.dev/posts/Trademaxxer_handling_collisions/), started to handle the references using a hash function, drastically lowering the collision rate.
+**The overall functional block diagram:**
 
-My objective now is to make a real FPGA demo, with a sort of trading frontend or something like that. But before doing that, we need to spend a little bit more time optimizing our memory management method and make the system a bit more robust.
+![Scheme 1: overall design](/assets/img/itch_soc_datapath.png)
+
+We also, in the [part6 post](https://hugobrh.dev/posts/Trademaxxer_handling_collisions/), started to handle the references issues using a hash function, drastically lowering the collision rate.
+
+But it was **NOT** enough ! My objective now is to make a real FPGA demo, with a sort of trading frontend or something like that. But before doing that, we need to spend a little bit more time optimizing our memory management method and make the system a bit more robust.
 
 For an **extremely high stakes** system such as the **TRADEMAXXER**, we need to completely avoid collisions. This objective is theoretically impossible, but practically doable if we play our cards right.
 
