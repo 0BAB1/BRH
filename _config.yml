@@ -16,7 +16,7 @@ timezone: Europe/Monaco
 
 title: BRH's Engineering Blog # the main title
 
-tagline: Sharing technical content and personal thoughts. 0% AI Slop Certified. # it will display as the subtitle
+tagline: 0% AI Slop Certified. # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
   Sharing technical content and personal thoughts. 0% AI Slop Certified.
