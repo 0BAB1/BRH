@@ -1,6 +1,6 @@
 ---
 title: Real Time Analysis & Industrial Planning
-description: "Applying real-time scheduling theory from embedded systems to production line planning — workforce occupation estimation, Liu and Layland feasibility analysis and simulation with Cheddar."
+description: "Experiment: Applying real-time scheduling theory from embedded systems to production line planning."
 date: 2024-11-5 15:00:00 +0800
 categories: [Tutorials]
 tags: [industry, thoughts]
@@ -16,18 +16,23 @@ When it comes to starting a new project in a manufacturing company, determining 
 - Aim too high and the client will not work with you
 - Aim too low and you'll go bankrupt
 
-And a big part of the costs on a production line are directly linked to the workforce cost.
+To make a good quotation on large volume projects, **it is essential** to plan the production precisely !
 
-The thing is workers can do many things, and if you production line only occupies 50% of their working time, this means they still have some time to convert into sweet added value (*aka money*).
+You never want tobe in a situation where:
 
-In this post, we'll review a technique called "Real Time Scheduling" but applied to prodctions line in order to determine the workforce costs linked to a production line.
+- You over-invest into machine and worforce, leading to low margins and non-comptetive prices.
+- You under-estimate the work load, leading to delivery delays, production & quality problems, ...
 
-> "Real Time Scheduling" is a technique mostly used in the embedded systems field. But any system involving some periodic scheluding can be treated as a real-time system to some degree, **especially** production lines !
-{: .prompt-tip }
+**The problem is** the "classic" industrial engineering theory lacks a solid base tool to **model** high volume production lines. Large plants often have their own model, and smaller plant often just straight up eyeball the capacity based on destimated process cycle times.
 
-So I'll let you do some reading on real time system for definitions, but I think an example is worth more than (boring) definitions so let's check out an example now !
+In this post, we'll review a technique called "Real Time Scheduling"... But applied to prodctions line in order to determine the workforce occupation and costs (investements needed) linked to a production line.
 
-## Laying down the problem
+{: .prompt-info }
+> "Real Time Scheduling" (or RTS) is a technique mostly used in the embedded systems field. **BUT** when considering processes as **tasks** and workforce (being a human or an operating machine) as **processing units**, RTS suddently becomes very relevant.
+
+So let's explore how RTS can be relevant for this matter and how we can build a basic production planning model based on these theories used in coimputer science...
+
+## Starting With an Example
 
 First, let's lay the basics: Imagine a production line with 2 machines :
 
@@ -44,16 +49,16 @@ The project requirements are to produce a part every 140 seconds[^1], so we are 
 - 1 part every 140s for the lathe
 - 3 parts every ```3*140=420s``` for the mill
 
-> We'll call these "**Periodicity**" from now on.
 {: .prompt-tip }
+> We'll call these "**Periodicity**" from now on.
 
 A these are the strict deadline we'll **have to meet everytime**. This means that we have some margin to operate on the machines (load a part, clean the machines,...) :
 
 - We have ```140-120=20s``` of margin for the lathe
 - We have ```420-345=75s``` of margin for the lathe
 
-> We'll call these "**Deadlines**" from now on. This is the MAX time it will have to take for us to load a part before we cannot meet the requirements anymore, as the machninning operation is fixed-time, as well as the *140s* requirement. 
 {: .prompt-tip }
+> We'll call these "**Deadlines**" from now on. This is the MAX time it will have to take for us to load a part before we cannot meet the requirements anymore, as the machninning operation is fixed-time, as well as the *140s* requirement. 
 
 Let's now record the time it takes to load the lathe and the mill :
 
@@ -62,8 +67,8 @@ Let's now record the time it takes to load the lathe and the mill :
 
 Good ! we fit our deadlines !
 
-> We'll call these "**Wort Case Execution Time (WCET)**" or "**Capacity**" from now on. This is the time it takes to complete a task.
 {: .prompt-tip }
+> We'll call these "**Wort Case Execution Time (WCET)**" or "**Capacity**" from now on. This is the time it takes to complete a task.
 
 We now consult the metrology guys to know how much time controlling a part will take, and at what frequency we'll have to control them, here is what they tell us :
 
@@ -93,7 +98,7 @@ So now we can already know that our operator will have ~33% of its working time 
 
 To take all of this into account, the industry already developed a metric called OEE (overall equipement efficiency) and it sits at around ```80-85%```.
 
-This metric si valid for a specific task but given the fact we have pultiple task changes, we go for the lower bracket : **80%**. Aplying this metric to our worker occupation, we get :
+This metric is valid for a specific task but given the fact we have multiple task changes, we go for the lower bracket : **80%**. Aplying this metric to our worker occupation, we get :
 
 ```txt
 ~33% / 0.8 = 40% real occupation.
@@ -126,17 +131,17 @@ Real_occupation < Max_occupation
 
 ## Simulate occupation
 
+{: .prompt-warning }
+> This simulation tool is used as an example here, its does not take into account many important things like the transition time etc... This is part of the models limits, which can be better simulated using custom made tools.
+
 Using the [cheddar](https://beru.univ-brest.fr/cheddar/) simulator, we are able to simulate our operator's journey in the production line and see how he will (more or less) operate on the production line and see if he has free & usable time to work elsewhere.
 
 The previous calculation were estimates but here, we could add a very precise description of **How many machines** the worker will operate on and adding a bit of realism by adding "*commute*" times to each WCET.
 
 First, let's simulate our first scenario and see what we can do from here. (you can find a detailed tutorial on how to use chaddar [here](https://beru.univ-brest.fr/cheddar/ug/ug_v3_3/pages/basics/), ignore the electronics stuff by not setting it and you'll be good to go).
 
-> POINT OF INFORMATION : In my simulation, everything is the same as in the spreadsheet, except I set the start time of the Milling to 20, as the worker will initialy strat loading the mill after loading the lathe. Also, I do not set the priority as I use a "*Dealine Rate Monotonic scheduler*" (Which just simulates doing whatever is the most urgent by deadline to do first, and stop whatever we did to do whatever has a shortest deadline). You can do further reading on the [cheddar](https://beru.univ-brest.fr/cheddar/) website. If you want to take OOE into account, you want want to modify the WCET here accordingly. I chose not to for this second example.
 {: .prompt-warning }
-
-> In order to simulate the time it takes to get from a machine to another, I add 3seconds to each WCET.
-{: .prompt-info }
+> POINT OF INFORMATION : In my simulation, everything is the same as in the spreadsheet, except I set the start time of the Milling to 20, as the worker will initialy strat loading the mill after loading the lathe. Also, I do not set the priority as I use a "*Dealine Rate Monotonic scheduler*" (Which just simulates doing whatever is the most urgent by deadline to do first, and stop whatever we did to do whatever has a shortest deadline, which lacks realism). You can do further reading on the [cheddar](https://beru.univ-brest.fr/cheddar/) website.
 
 ![Simulation results of worker occupation on the production line](https://image.noelshack.com/fichiers/2024/45/2/1730803127-capture.jpg)
 
@@ -164,7 +169,10 @@ We see our worker is very busy at the beginning ! Given the facts that they are 
 > You can now play around with the scheduler and set priorities to the task in order to see on different organizations would affect the worker.
 {: .prompt-info }
 
-## Conclusion
+## Limits to this Model & Improvements
+
+> Note that the example given above is just an introduction and only works for simple exmaples were pericicites and cycle times are asseted to be the same for each macine. If this approximation does not fit your use case, contect me for more infrmation on how to accurately estimate the actual line periodicity and thus : worker occupation AND real cylcle time.
+{: .prompt-warning }
 
 We now have a very interresting tool to determine
 
@@ -173,17 +181,31 @@ We now have a very interresting tool to determine
 - Whether or not our actual production rate meets orders deadlines.
 
 Of course, beacause this tools comes from embedded system, you will have to tinker the way you model the worker differently depending on the final need.
+
 For example, When I used this technique to plan production line IRL, I used a slightly different model where I first pick a periodicity based on the largest task and applied industry standard coefficient to take the worker's experience and task complexity into account.
 
-This real time analysis tool was meant for very accurate system, so there is still room for interpretation and tweaking for our application.
+All that to say that this exmaple is very flawed. First of all, the task cannot start being completed before the machine stopped its cycle. So there is an actual delay, which exists in RTS theory models but which is not taken into account in this simple example.
 
-> Note that the example given above is just an introduction and only works for simple exmaples were pericicites and cycle times are asseted to be the same for each macine. If this approximation does not fit your use case, contect me for more infrmation on how to accurately estimate the actual line periodicity and thus : worker occupation AND real cylcle time.
-{: .prompt-danger }
+Also, when planning a production line, you also have to apply coefficients to each and every action / process. These coefficients are documented in the industries based on empirical observations and most of them anre not mentionned here. This means that there is a whole pre/post provessing of the cycles times you have to perform using these coefficients.
+
+This basic exmaple also completly lacks the representation of transition times (e.g. for someone to walk from on achine to another, tidy up tools before switching tasks, etc...). depending on what the workforce is (human/robot), the model will vary. It is up to you to take this into account using coefficient or a precise (custom) simulation tool.
+
+Finally, depending on the industry specificities and targetted working conditions, you may manna tweak the model to fit your constraints.
+
+At the end of the day, when I implemented this IRL, this tool was so useful, as we start from a slid proven base (RTS theory) and work our way towards a precise model to plan a very demandin production line using:
+
+- The least amount of machines
+- The least amount of worker time
+- ...
+
+And this allows to business to make a **precise and competitive quotation** but also limit bad surprises when shit hits the fan.
+
+## Conclusion
 
 This post was meant to introduce the reader to this tool. Similar solutions include the [Cycle diagram](https://fr.wikipedia.org/wiki/Diagramme_de_cycle) which is kind of an old-scool forgetten tool that does not even have an english wiki version.
 
-> If you need clarifications, do not hesitate to contact me, or leave a comment below.
 {: .prompt-info }
+> If you need clarifications, do not hesitate to contact me, or leave a comment below.
 
 Thank you for reading to this point. You can write a comment below if you have any question.
 
