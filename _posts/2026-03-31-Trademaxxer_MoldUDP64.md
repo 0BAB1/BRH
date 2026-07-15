@@ -206,7 +206,7 @@ In summary, the design is **very simple** and it's just a matter of stripping of
 
 You can see this simplicity really translate in simulation where we just see streams getting progressively stripped of their headers.
 
-![KC705 image](/assets/img/mold_sim.png)
+![sim image](/assets/img/mold_sim.png)
 
 This simulation is based on a cocotb/verilator testbench. The `RGMII` signals are known to be valid & standard because I used the `cocotbext-eth` extension.
 
