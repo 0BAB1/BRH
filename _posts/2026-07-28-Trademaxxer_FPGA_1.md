@@ -338,9 +338,47 @@ Total dropped                   : 0
 Load factor BRAM                : 0.6796
 ```
 
-## Final Implementation & Conclusion.
+## Final Implementation
 
-Currently going through a sh*tload of *FPGA/VIVADO* related shenanigans that are not described here, I ill update this post one the TIMING passes. For now, it doesnt, some 1ns paths remains. I hope to finish that tommorow.
+Currently going through a sh*tload of *FPGA/VIVADO* related shenanigans that are not described here, I ill update this post one the TIMING passes.
+
+**UPDATE:**
+
+![trademaxxer timing passes](../assets/img/trademaxxer_timing.png)
+
+Timing finally passes ! there was a tons of critical paths left and right ! But I finally got it to work !
+
+The worst paths were:
+
+- the stash 1st reduction tree level, which has enormous fanouts due to the fact this logic is comparators all around, which get expensive timing-wise, even when brutally reducing the number of registers per bank.
+- the hash generation path, as cascading DSP38s took tons of time to produce the result, even when falling back to a less complex XOR fold + 32 bits mul hash instead of the original 64bits mul.
+
+Anyway, at some, I was super close but the design just couldn't close timing on 133MHz, so I reduced the speed to 125MHz in order to pass timing. The design should still work as the input CDC async fifo *should* absorb small differences between the design clock and the ethernet clock.
+
+Here is the final utilisation as well:
+
+| Module / Instance             | Slice LUTs | Slice Registers | F7 Muxes | F8 Muxes | Slices | LUT as Logic | LUT as Memory | BRAM |
+|------------------------------|-----------:|----------------:|----------:|----------:|-------:|-------------:|--------------:|-----:|
+| clk_wiz_0                    |          0 |               0 |         0 |         0 |      0 |            0 |             0 | 0 |
+| jtag_axi_0                   |        408 |           1,263 |         0 |         0 |    318 |          406 |             2 | 2.5 |
+| trademaxxer_fpga_top         |     51,962 |          28,995 |     2,307 |     1,024 | 15,710 |       51,892 |            70 | 137 |
+| └── axis_async               |         55 |             138 |         0 |         0 |     60 |           55 |             0 | 1 |
+| └── ethernet_parser          |         31 |              31 |         0 |         0 |     13 |           25 |             6 | 0 |
+| └── ip_parser                |         54 |              13 |         0 |         0 |     25 |           54 |             0 | 0 |
+| └── itch_parser              |        486 |             331 |         0 |         0 |    189 |          486 |             0 | 0 |
+| └── mold_udp_64              |         27 |              12 |         0 |         0 |     12 |           27 |             0 | 0 |
+| └── order_book               |     51,132 |          28,392 |     2,307 |     1,024 | 15,463 |       51,068 |            64 | 128 |
+| &nbsp;&nbsp;&nbsp;&nbsp;├── bram1_if |         83 |              10 |         0 |         0 |     50 |           83 |             0 | 64 |
+| &nbsp;&nbsp;&nbsp;&nbsp;├── bram2_if |        148 |              16 |         0 |         0 |     94 |          148 |             0 | 64 |
+| &nbsp;&nbsp;&nbsp;&nbsp;├── micro_op |        962 |           2,227 |       131 |         0 |  1,049 |          962 |             0 | 0 |
+| &nbsp;&nbsp;&nbsp;&nbsp;└── stash_ins |     49,752 |          23,576 |     2,176 |     1,024 | 13,997 |       49,688 |            64 | 0 |
+| └── price_ladder             |        147 |              66 |         0 |         0 |     75 |          147 |             0 | 8 |
+| └── rgmii_rx_intf            |          3 |               0 |         0 |         0 |      2 |            3 |             0 | 0 |
+| └── udp_parser               |         28 |              12 |         0 |         0 |     12 |           28 |             0 | 0 |
+
+As you can see, the tradmaxxer by itself does not use much resources, but the stash is extremely resources hungry, which is the cost of having a hyper versatile fallback memory solution to handle collisions...
+
+A tradeoff may be reached by increasing the probing steps $N$ to 16, as simulations showed it would allow us to have a super small stash (by lowering collision rate, but increasing worst case delay), which is something I'll keep in mind if I ever need to use less resources or increase frequency.
 
 ## Conclusion
 
