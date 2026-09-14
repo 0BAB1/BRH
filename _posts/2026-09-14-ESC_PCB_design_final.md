@@ -4,7 +4,7 @@ date: 2026-09-14 16:00:00 +0800
 categories: [Projects]
 tags: [electronics]
 pin: false
-math: false
+math: true
 mermaid: false
 ---
 

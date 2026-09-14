@@ -1,5 +1,5 @@
 ---
-title: "FPGA HFT Order Book: Part 7, Collision-Free AAPL Order Book on FPGA"
+title: "FPGA HFT Order Book: Part 7, Collision-Free AAPL Order Book"
 date: 2026-06-30 16:00:00 +0800
 categories: [Projects]
 tags: [finance, fpga]
